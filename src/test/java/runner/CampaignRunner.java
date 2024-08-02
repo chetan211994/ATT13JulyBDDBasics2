@@ -6,9 +6,10 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		
 		features = {"src\\test\\resources\\appfeature\\campaign.feature"},
-		glue = {"steps"},
+		glue = {"steps", "hooks"},
 		plugin = {"pretty"},
-		tags = "@sanity or @regression"
+		tags = "@campaign"
+		
 		)
 
 

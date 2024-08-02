@@ -1,3 +1,4 @@
+@campaign
 Feature: Sending email campaign
 @sanity
 Scenario: Create campaign
@@ -13,7 +14,7 @@ When user click on edit campaign button
 And user update the details
 Then campaign should get updated
 
-@functional @sanity
+@functional 
 Scenario: delete campaign
 Given user should be at campaign page
 When user click on delete button

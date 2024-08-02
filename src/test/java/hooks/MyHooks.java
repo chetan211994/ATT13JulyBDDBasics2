@@ -10,11 +10,30 @@ import io.cucumber.java.BeforeStep;
 public class MyHooks {
 	
 	
-	@Before
+	@Before("@regression")
 	public void beforeHook1()
 	{
 		System.out.println("Before hook1 is executing");
 	}
+	
+	@After("@sanity")
+	public void afterHook2() {
+		System.out.println("After hook2 is executing");
+	}
+	
+	@BeforeStep("@sanity")
+	public void beforeStep1()
+	{
+		System.out.println("Before step1 is executing");
+	}
+	
+	@AfterStep
+	public void afterStep()
+	{
+		
+		System.out.println("After step is executing");
+	}
+	
 	
 //	@After(order = 100)
 //	public void afterHook1() {
@@ -27,44 +46,31 @@ public class MyHooks {
 //		System.out.println("Before hook2 is executing");
 //	}
 	
-	@After
-	public void afterHook2() {
-		System.out.println("After hook2 is executing");
-	}
 	
-	@BeforeStep(order = 1)
-	public void beforeStep1()
-	{
-		System.out.println("Before step1 is executing");
-	}
-	@BeforeStep(order = 2)
-	public void beforeStep2()
-	{
-		System.out.println("Before step2 is executing");
-	}
+//	@BeforeStep(order = 2)
+//	public void beforeStep2()
+//	{
+//		System.out.println("Before step2 is executing");
+//	}
 
-	@AfterStep
-	public void afterStep()
-	{
-		System.out.println("After step is executing");
-	}
 	
-	@BeforeAll(order = 1)
-	public static void beforeAll1()
-	{
-		System.out.println("Before all1 is executing");
-	}
 	
-	@BeforeAll(order = 2)
-	public static void beforeAll2()
-	{
-		System.out.println("Before all2 is executing");
-	}
-	
-	@AfterAll
-	public static void afterAll()
-	{
-		System.out.println("After all is executing");
-	}
+//	@BeforeAll(order = 1)
+//	public static void beforeAll1()
+//	{
+//		System.out.println("Before all1 is executing");
+//	}
+//	
+//	@BeforeAll(order = 2)
+//	public static void beforeAll2()
+//	{
+//		System.out.println("Before all2 is executing");
+//	}
+//	
+//	@AfterAll
+//	public static void afterAll()
+//	{
+//		System.out.println("After all is executing");
+//	}
 	
 }

@@ -1,4 +1,5 @@
 Feature: Login functionality
+@login
 Scenario: Login to application
 Given I am at the login page
 When I enter the credentials
