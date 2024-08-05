@@ -46,6 +46,7 @@ public class AppHooks {
 			byte[] source = ts.getScreenshotAs(OutputType.BYTES);
 			
 			scenario.attach(source, "image/png", modifiedScenarioName);
+	
 		}
 	}
 	

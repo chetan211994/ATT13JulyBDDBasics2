@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
-	@FindBy(xpath = "//*[@id='nav-carthghj']")
+	@FindBy(xpath = "//*[@id='nav-cart']")
 	private WebElement cartIcon;
 
 	@FindBy(xpath = "//*[@alt='Great Freedom Sale']")
