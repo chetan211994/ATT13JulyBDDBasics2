@@ -23,7 +23,16 @@ public class AppHooks {
 		
 		prop = new PropReader();
 		
-		String browserName = prop.readPropData("browser");
+	String browserName = prop.readPropData("browser");// browsername comming from properties file
+		
+	String cmdBrowserName = System.getProperty("cliBrowser");// browsername comming from command prompt
+	
+	System.out.println("Browsername from command prompt received: "+cmdBrowserName);
+	
+	if(cmdBrowserName != null)
+	{
+		browserName = cmdBrowserName;
+	}
 		
 		driver = df.initBrowser(browserName);
 		

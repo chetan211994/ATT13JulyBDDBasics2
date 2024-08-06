@@ -11,7 +11,9 @@ import io.cucumber.testng.CucumberOptions;
 				"pretty",
 				"html:target/amazontestreport/reports.html"
 				},
-		publish = true
+		publish = true,
+		
+		tags = "@sanity"
 		)
 
 
