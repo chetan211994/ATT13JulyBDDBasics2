@@ -8,4 +8,4 @@ Then I should be able to login
 
 Scenario: title validation
 Given I am at the login page
-Then I should see page title
+Then I should see page

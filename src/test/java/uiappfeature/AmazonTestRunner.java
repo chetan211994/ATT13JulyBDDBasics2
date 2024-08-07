@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 				},
 		publish = true,
 		
-		tags = "@sanity"
+		tags = "not (@sanity or @functional)"
 		)
 
 

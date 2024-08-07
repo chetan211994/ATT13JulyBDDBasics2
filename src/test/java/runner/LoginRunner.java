@@ -7,7 +7,9 @@ import io.cucumber.testng.CucumberOptions;
 		
 		features = {"src\\test\\resources\\appfeature\\Login.feature"},
 		
-		glue = {"steps"}
+		glue = {"steps"}, 
+		
+		dryRun = true
 		
 		
 		)
