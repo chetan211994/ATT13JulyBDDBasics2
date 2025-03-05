@@ -6,26 +6,29 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import drivermanager.DriverFactory;
+import drivermanager.DriverFactory2;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HomePage;
 
 public class HomePageSteps {
-	HomePage homepage =new  HomePage(DriverFactory.getDriver());
+	HomePage homepage =new  HomePage(DriverFactory2.getDriver());
 @Given("I am at the landing page")
 public void i_am_at_the_landing_page() {
-WebDriver driver = DriverFactory.getDriver();
+WebDriver driver = DriverFactory2.getDriver();
 
 driver.get("https://www.amazon.in/");
+driver.navigate().refresh();
 }
 
 @Then("page title should have {string}")
-public void page_title_should_have(String string) {
+public void page_title_should_have(String string) throws InterruptedException {
 
 	String actualTitle = homepage.fetchTitle();
 boolean isPresent = actualTitle.contains(string);
 
+Thread.sleep(60000);
 Assert.assertEquals(isPresent, true);
 }
 

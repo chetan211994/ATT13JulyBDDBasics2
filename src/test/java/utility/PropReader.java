@@ -10,7 +10,7 @@ public class PropReader {
 	public String readPropData(String propToBeRead) throws IOException {
 		Properties prop = new Properties();
 
-		String pathOfConfig = System.getProperty("user.dir") + "\\src\\test\\resources\\Config.properties";
+		String pathOfConfig = System.getProperty("user.dir") + "//src//test//resources//Config.properties";
 
 		FileInputStream fis = new FileInputStream(pathOfConfig);
 

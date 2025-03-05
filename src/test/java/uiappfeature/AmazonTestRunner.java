@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		
-		features = {"src\\test\\resources\\uiappfeature"},
+		features = {"src//test//resources//uiappfeature"},
 		glue = {"uiappfeature"},
 		plugin = {
 				"pretty",
@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 				},
 		publish = true,
 		
-		tags = "not (@sanity or @functional)"
+		tags = "@sanity"
 		)
 
 

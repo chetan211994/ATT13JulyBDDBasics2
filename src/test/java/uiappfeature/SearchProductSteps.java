@@ -3,12 +3,13 @@ package uiappfeature;
 import org.testng.Assert;
 
 import drivermanager.DriverFactory;
+import drivermanager.DriverFactory2;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.SearchPage;
 
 public class SearchProductSteps {
-	SearchPage search = new SearchPage(DriverFactory.getDriver());
+	SearchPage search = new SearchPage(DriverFactory2.getDriver());
 	
 	@When("I search product as {string}")
 	public void i_search_product_as(String string) {

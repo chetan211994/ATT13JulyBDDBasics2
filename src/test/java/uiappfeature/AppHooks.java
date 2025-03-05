@@ -7,6 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import drivermanager.DriverFactory;
+import drivermanager.DriverFactory2;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -19,7 +20,7 @@ public class AppHooks {
 	@Before
 	public void launchBrowser() throws IOException
 	{
-		DriverFactory df = new DriverFactory();
+		DriverFactory2 df = new DriverFactory2();
 		
 		prop = new PropReader();
 		
