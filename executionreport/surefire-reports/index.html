@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="uiappfeature.AmazonTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;validation of title of page&quot;, &quot;Homepage functionality&quot;)">runScenario("validation of title of page", "Homepage functionality")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="uiappfeature.AmazonTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;verify cart icon&quot;, &quot;Homepage functionality&quot;)">runScenario("verify cart icon", "Homepage functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="uiappfeature.AmazonTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;validation of title of page&quot;, &quot;Homepage functionality&quot;)">runScenario("validation of title of page", "Homepage functionality")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -132,29 +123,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">uiappfeature.AmazonTestRunner</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;validation of title of page&quot;, &quot;Homepage functionality&quot;)">
-                  </a> <!-- runScenario("validation of title of page", "Homepage functionality") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("validation of title of page","Homepage functionality")</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at uiappfeature.HomePageSteps.page_title_should_have(HomePageSteps.java:32)
-	at ✽.page title should have &quot;Shopping&quot;(file:///home/seleniumbddtestframework/src/test/resources/uiappfeature/Homepage.feature:5)
-... Removed 7 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -167,6 +135,16 @@
                   </a> <!-- runScenario("verify cart icon", "Homepage functionality") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("verify cart icon","Homepage functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;validation of title of page&quot;, &quot;Homepage functionality&quot;)">
+                  </a> <!-- runScenario("validation of title of page", "Homepage functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("validation of title of page","Homepage functionality")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -237,11 +215,11 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'uiappfeature.AmazonTestRunner')
-data.setCell(0, 3, 58254);
+data.setCell(0, 3, 66203);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'uiappfeature.AmazonTestRunner')
-data.setCell(1, 3, 10873);
+data.setCell(1, 3, 7928);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -274,22 +252,20 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">uiappfeature.AmazonTestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@2cd62003)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@370c1968)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("validation of title of page", "Homepage functionality")</span>
-                <span class="method-start">2493 ms</span>
+                <span class="method-start">3835 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("verify cart icon", "Homepage functionality")</span>
-                <span class="method-start">60767 ms</span>
+                <span class="method-start">70055 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">71645 ms</span>
+                <span class="method-start">77987 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -29,7 +29,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 				capabilities = new FirefoxOptions();
 			}
 			
-			driver = new RemoteWebDriver(new URL("http://192.168.45.186:4444/wd/hub"), capabilities);
+			driver = new RemoteWebDriver(new URL("http://192.168.46.186:4444/wd/hub"), capabilities);
 			return driver;
 		}
 		
