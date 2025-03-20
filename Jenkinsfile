@@ -33,7 +33,12 @@ Chetan''', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS! - Cu
     }
         }
         
-
+        stage('Making the infrastructure down') {
+            steps {
+                bat "docker-compose down"
+            }
+        }
+       
         
     }
      
